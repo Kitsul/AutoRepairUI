@@ -1,0 +1,39 @@
+
+p{
+    font-size: 12px;
+}
+.col-auto{
+    padding: 0;
+}
+.vdivide{
+    background: #e0e0e0;
+    width: 1px;
+    padding: 0;
+    margin: 0 0 0 0;
+  }
+  .app-social-share-button {
+    margin: 0 10px;
+    padding: 2px 20px;
+    color: white !important;
+}
+
+.app-social-share-button img {
+    width: 20px;
+    height: 20px;
+    vertical-align: top;
+}
+
+.app-social-share-facebook {
+    background-color: rgb(62, 89, 165);
+}
+
+.app-social-share-twitter {
+    background-color:rgb(27, 149, 224);
+} 
+.inner{
+    padding: 0;
+    margin: 0;
+}
+.inner p {
+    margin: 0;
+}

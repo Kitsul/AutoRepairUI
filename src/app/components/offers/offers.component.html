@@ -1,0 +1,83 @@
+<div class="container-fluid">
+    <div class="row py-3">
+        <div class="col">
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col">
+                  <h3 class="text-center text-uppercase text-primary px-0">Sign up for special offers</h3>
+                </div> 
+                <div class="col-2"></div>
+            </div>
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col px-4">
+                    <p class="text-center small">Enter your mail and you will get the best offers we have directly to your inbox</p>
+                </div>
+                <div class="col-3"></div> 
+            </div>
+          </div>
+          <div class="col-auto vdivide">
+          </div>
+          <div class="col">
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-sm">
+                  <h3 class="text-center text-uppercase text-primary px-0">Sign up for special offers</h3>
+                </div> 
+                <div class="col-2"></div>
+              </div>
+              <div class="row">
+                  <div class="col-3"></div>
+                  <div class="col px-4">
+                    <p class="text-center small">Enter your mail and you will get the best offers we have directly to your inbox</p>
+                   </div> 
+                   <div class="col-3"></div>
+                </div>
+              </div>
+    </div>
+    
+    <div class="row inner">
+        <div class="col">
+            <p class="text-center small">OR</p>
+        </div>
+     </div>
+      
+    <div class="row py-3">
+        <div class="col">
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col">
+                    <form [formGroup]="form">
+                    <div class="input-group">
+                        <input type="email" class="form-control border border-primary" 
+                               placeholder="ENTER HERE YOUR EMAIL"
+                               formControlName="email">
+                        <div class="input-group-append">
+                          <button class="btn btn-primary text-uppercase" [disabled]="!form.valid"  (click)="onSend()" type="button">Send</button>
+                        </div>
+                     </div>
+                    </form>
+                </div> 
+                <div class="col-3"></div>
+            </div>
+          </div>
+          <div class="col-auto vdivide">
+            </div>
+          <div class="col">
+              <div class="row">
+                  <div class="col-4"></div>
+                  <div class="col-sm">
+                      <a href="https://twitter.com" class="btn btn-default app-social-share-button app-social-share-facebook">
+                        <i class="fa fa-twitter" style="color:white"></i>
+                        <span>Share</span>
+                      </a>
+                      <a href="https://www.facebook.com/" class="btn btn-default app-social-share-button app-social-share-twitter">
+                        <i class="fa fa-facebook" style="color:white"></i>
+                      <span> Tweet</span>
+                    </a>
+                  </div> 
+                  <div class="col-3"></div>
+                </div>
+                </div>
+      </div>
+</div> 

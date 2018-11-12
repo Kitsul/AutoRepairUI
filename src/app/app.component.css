@@ -1,0 +1,26 @@
+.mainheader{
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/assets/icons/schedule-appointment.gif');
+    background-size: cover;
+    background-position: center;
+
+}
+.op{
+    opacity: 0.8;
+    background-color: white;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    padding: 0;
+}
+.maincontainer{
+    width: 90%;
+    margin: 0 auto;
+}
+.innercontainer{
+    width: 80%;
+    margin: 0 auto;
+}

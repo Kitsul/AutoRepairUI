@@ -1,0 +1,187 @@
+<form [formGroup]="appoimtmentForm" (ngSubmit)="onSubmit()">
+
+<div class="container-fluid">
+  <div class="row">
+      <div class="col"></div>
+      <div class="col-auto">
+          <h3 class="text-uppercase text-left text-primary my-5">Please select a convenient time to leave your vehicle with us</h3>
+      </div>
+      <div class="col"></div>
+  </div>
+      <div class="row">
+          <div class="col-sm">
+              <div class="row my-3">
+                  <div class="col-sm-5" [ngClass]="{'has-error' : appoimtmentForm.get('dateStart').errors && appoimtmentForm.get('dateStart').touched}">
+                      <input 
+                        placeholder="SELECT A DATE" 
+                        class="form-control" 
+                        type="text" 
+                        onfocus="(this.type='date')" 
+                        onblur="(this.type='text')" 
+                        id="dateStart"
+                        formControlName="dateStart">
+                      <span class="help-block" *ngIf="appoimtmentForm.get('dateStart').errors && appoimtmentForm.get('dateStart').touched">
+                            <span *ngIf="appoimtmentForm.get('dateStart').errors.required">Date is required</span>
+                      </span>
+                  </div>
+                  <div class="col-sm-5 form-group"  [ngClass]="{'has-error' : appoimtmentForm.get('timeStart').errors && appoimtmentForm.get('timeStart').touched}">
+                      <input 
+                        type="text" 
+                        value="13:45" 
+                        id="timeStart"
+                        onfocus="(this.type='time')" 
+                        onblur="(this.type='text')" 
+                        formControlName="timeStart" 
+                        class="form-control" 
+                        placeholder="SELECT YOUR TIME">
+                      <span class="help-block" *ngIf="appoimtmentForm.get('timeStart').errors && appoimtmentForm.get('timeStart').touched">
+                            <span *ngIf="appoimtmentForm.get('timeStart').errors.required">Time is required</span>
+                      </span>
+                  </div>
+                  <div class="col-sm-2"></div>
+              </div>
+              <div class="row my-3">
+                  <div class="col-sm-5">
+                      <input 
+                        type="text" 
+                        id="dateEnd"
+                        onfocus="(this.type='date')" 
+                        onblur="(this.type='text')" 
+                        formControlName="dateEnd" 
+                        class="form-control" 
+                        placeholder="SELECT A DATE">
+                  </div>
+                  <div class="col-sm-5">
+                      <input 
+                        type="text" 
+                        id="timeEnd" 
+                        formControlName="timeEnd" 
+                        class="form-control" 
+                        placeholder="SELECT YOUR TIME"
+                        onfocus="(this.type='time')" 
+                        onblur="(this.type='text')">
+                  </div>
+                  <div class="col-sm"></div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-5">
+                      <p class="text-left text-uppercase">Store hours</p>
+                      <ul class="text-uppercase">
+                          <li><a>MON-WED</a></li>
+                          <li><a>8:00 AM - 05:00PM</a></li>
+                          <li><a>THU</a></li>
+                          <li><a>08:00 AM - 04:00PM</a></li>
+                          <li><a>FRI</a></li>
+                          <li><a>08:00 AM - 01:00PM</a></li>
+                          <li><a>SAT</a></li>
+                          <li><a>CLOSE</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-sm-5">
+                      <p class="text-left text-uppercase">Choose your services</p>
+                      <ul class="text-uppercase">
+                            <li>
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" formControlName="transmission">
+                                    <label class="form-check-label" for="exampleCheck1">Transmission</label>
+                                </div>
+                            </li>
+                            <li></li>
+                            <li>
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" formControlName="vehicleMaintance">
+                                    <label class="form-check-label" for="exampleCheck1">Vehicle Maintenance</label>
+                                </div>
+                            </li>
+                            <li></li>
+                            <li>
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" formControlName="vehicleRepair">
+                                    <label class="form-check-label" for="exampleCheck1">Vehicle Rapair</label>
+                                </div>
+                            </li>
+                            <li></li>
+                            <li>
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" formControlName="other">
+                                    <label class="form-check-label" for="exampleCheck1">Other</label>
+                                </div>
+                            </li>
+                      </ul>
+                  </div>
+                  <div class="col-auto"></div>
+              </div>    
+          </div>
+          <div class="col-sm-auto vdivide">
+          </div>
+          <div class="col-sm">
+              <div class="row my-3">
+                  <div class="col-sm-5">
+                      <input type="number" class="form-control" formControlName="yearOfCar" placeholder="YEAR OF CAR">
+                  </div>
+                  <div class="col-sm-5">
+                        <select id="carType" formControlName="carType" class="form-control">
+                            <option selected disabled value="">SELECT YOUR CAR</option>
+                            <option *ngFor="let item of carModel" [value]="item">{{item}}</option>
+                         </select>
+                  </div>
+                  <div class="col-sm-2"></div>
+              </div>
+              <div class="row my-3">
+                  <div class="col-sm-10">
+                      <input type="text" class="form-control" formControlName="message" placeholder="WRITE YOUR MESSAGE">
+                  </div>
+                  <div class="col-sm-2"></div>
+              </div>
+              <div class="row">
+                      <div class="col-sm-10">
+                          <p class="text-left text-uppercase">Personal details</p>
+                      </div>
+                      <div class="col-sm-2"></div>
+              </div>
+            <div>
+              <div class="row" [ngClass]="{'has-error' : appoimtmentForm.get('firstName').errors && appoimtmentForm.get('firstName').touched}">
+                  <div class="col-sm-5">
+                      <input id="firstName" formControlName="firstName" type="text" class="form-control" placeholder="FIRST NAME" required>
+                      <span class="help-block" *ngIf="appoimtmentForm.get('firstName').errors && appoimtmentForm.get('firstName').touched">
+                        <span *ngIf="appoimtmentForm.get('firstName').errors.required">First name is required</span>
+                        <span class="valid-tooltip" *ngIf="appoimtmentForm.get('firstName').errors.minlength || appoimtmentForm.get('firstName').errors.maxlength">
+                            First name must be greater than 2 characters and less than 10 characters
+                        </span>
+                      </span>
+                  </div>
+                  <div class="col-sm-5">
+                      <input id="secondName" type="text" formControlName="secondName" class="form-control" placeholder="SECOND NAME">
+                  </div>
+                  <div class="col-sm-2"></div>
+              </div>
+               <div class="row my-3" [ngClass]="{'has-error' : appoimtmentForm.get('email').errors && appoimtmentForm.get('email').touched}">
+                  <div class="col-sm-5">
+                      <input id="email" type="email" formControlName="email" class="form-control" placeholder="E-MAIL">
+                      <span class="help-block" *ngIf="appoimtmentForm.get('email').errors && appoimtmentForm.get('email').touched">
+                            <span *ngIf="appoimtmentForm.get('email').errors.required">Email name is required</span>
+                      </span>
+                  </div>
+                  <div class="col-sm-5">
+                      <input id="phoneNumber" type="tel" formControlName="phoneNumber" class="form-control" placeholder="PHONE NUMBER">
+                  </div>
+                  <div class="col-sm-2"></div>
+              </div>
+            </div>
+              <div class="row my-3">
+                  <div class="col-sm-5">
+                      <p class="text-left">
+                          <button type="button" class="btn btn-outline-primary text-uppercase" (click)="onClear()">Clear</button>
+                      </p>
+                  </div>
+                  <div class="col-sm-5">
+                      <p class="text-right text-uppercase">
+                          <button type="submit" [disabled]="!appoimtmentForm.valid" class="btn btn-primary text-uppercase">Send</button>
+                      </p>
+                  </div>
+                  <div class="col-sm-2"></div>
+              </div>
+          </div>
+      </div>
+</div>
+</form>        

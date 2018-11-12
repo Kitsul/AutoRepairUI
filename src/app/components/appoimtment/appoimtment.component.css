@@ -1,0 +1,40 @@
+ul {
+    list-style-type: none;
+    font-size: 13px;
+    margin-left: -36px;
+    font-size: 10px;
+}
+li:first-child {
+    font-size: 14px;
+}
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+li:nth-child(odd) {
+    font-size: 12px;
+    margin: 10px 0 0 0;
+}
+li:nth-child(even) {
+    font-size: 10px;
+}
+.vdivide{
+    background: #e0e0e0;
+    width: 1px;
+    padding: 0;
+    margin: 0 0px 0 0;
+  }
+  .text-center {
+    text-align: center;
+  }
+  span{
+      color:red;
+  }
+  .store{
+    font-size: 12px !important;
+    margin: 0 !important;
+  }

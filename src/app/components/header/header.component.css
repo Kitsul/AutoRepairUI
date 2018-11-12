@@ -1,0 +1,129 @@
+
+.header{
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/assets/images/schedule-appointment.gif'); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+.header-top{
+    width: 100%;
+    padding: 15px 150px;
+    display: flex;
+}
+
+.header-top__bg{
+    background-color: rgba(255,255,255,0.7);
+}
+
+.block-left{
+    width: 30%;
+}
+.block-right{
+    width: 70%;
+}
+
+.header-top__menu{
+    display: flex;
+    justify-content: flex-end;
+}
+.header-top__menu-item{
+    padding: 0 6px;
+    font-family: 'OpenSansHebrew-r', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #1d3f6f;
+}
+
+.header-top__phone{
+    display: flex;
+    justify-content: flex-end;
+}
+.header-top__phone-text{
+    padding: 8px 15px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'OpenSansHebrew-r', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.header-top__phone-text span{
+    display: block;
+}
+.font-grey-l{
+    color: #999999;
+}
+.font-grey-d{
+    color: #666666;
+}
+.header-top__phone-number{
+    font-size: 31px;
+    color: #fe000b;
+}
+
+.navbar-inverse{
+    background-color: rgba(255,255,255,0.9);
+    border-color: rgba(255,255,255,0.9);
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #1d3f6f;
+}
+.nav {
+    width: 100%;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+.navbar {
+    border-radius: 0 !important;
+}
+
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 0;
+    border: 0;
+}
+
+.header-bottom__content{
+    padding: 11% 0 7% 0;
+}
+.header-bottom__content h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 41px;
+    color:  #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+}
+.header-bottom__content-comment{
+    padding-top: 7%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color:  #ffffff;
+    text-align: center;
+}
+
+.arrow-down{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 1%;
+}
+.glyphicon-menu-down{
+    margin-top: -6px;
+    color: #ffffff;
+}
+.navbarb{
+    background-color: rgba(255,255,255,0.7);
+}
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 0px solid black;
+    margin:  0;
+    padding: 0;
+}
