@@ -16,13 +16,6 @@ export class AppoimtmentComponent implements OnInit {
   public isValid: boolean =  true;
   public carModel: Array<string>;
   private appointment: Appointment;
-
-    services = [
-    { id: '1', value:'Transmission'},
-    { id: '2', value:'Vehicle Maintenance'},
-    { id: '3', value:'Vehicle Rapair'},
-    { id: '4', value:'Other'}
-];
   constructor(
     private _autorepairService: AutorepairService,
     private appoimtmentFormGroup: FormBuilder) {
